@@ -1,5 +1,2 @@
-nums_list = [1,2,3,4,1]
-
-
-
-
+num_list = [1, 2.5, 'PK']
+print(num_list[2])
