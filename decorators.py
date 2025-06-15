@@ -2,16 +2,16 @@
 # functionality and returns other function without changing the source code of 
 # the function we passed as an argument
 
-# def decorated_function(original_func):
-#     def wrapper_function():
-#         print(f'wrapper executed this before:{original_func.__name__}')
-#         return original_func()
-#     return wrapper_function
+def decorated_function(original_func):
+    def wrapper_function():
+        print(f'wrapper executed this before:{original_func.__name__}')
+        return original_func()
+    return wrapper_function
 
-# def display_func():
-#     print('display function ran')
-# display_func = decorated_function(display_func)
-# display_func()
+def display_func():
+    print('display function ran')
+display_func = decorated_function(display_func)
+display_func()
 # #  if we observe above, even though we executed display_func(), it resulted in added
 # # functionality of display_func() and we haven't even changed the original function
 # # the same above can be written as below also by using keyword
